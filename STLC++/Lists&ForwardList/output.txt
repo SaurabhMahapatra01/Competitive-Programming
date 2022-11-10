@@ -1,0 +1,4 @@
+3 9 7 1 5 
+apple Pineapple Guava Banana Pineapple Mango 
+apple Guava Banana Mango 
+apple Juice Guava Banana Mango 
