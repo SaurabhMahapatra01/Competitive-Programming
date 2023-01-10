@@ -8,6 +8,15 @@ Unique Number - Given 3N + 1 Numbers,
 using namespace std;
 
 
+void updateSum(vector<int>&SumOFarr, int x) {
+    for (int i = 0; i < 32; ++i)
+    {
+        int IthBit = x & (1 << i);
+        if (IthBit) {
+            SumOFarr[i]++;
+        }
+    }
+}
 
 int NumFromBits(vector<int>SumOFarr) {
     int num = 0;
@@ -30,15 +39,7 @@ int UniqueNo3(vector<int>arr) {
     }
     return NumFromBits(SumOFarr);
 }
-void updateSum(vector<int>&SumOFarr, int x) {
-    for (int i = 0; i < 32; ++i)
-    {
-        int IthBit = x & (1 << i);
-        if (IthBit) {
-            SumOFarr[i]++;
-        }
-    }
-}
+
 int main()
 {
 #ifndef ONLINE_JUDGE
